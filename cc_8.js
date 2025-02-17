@@ -67,3 +67,11 @@ let cart = createCartTracker();
 (cart(20)); // Expected output: "Total Cart Value: $20"
 (cart(35)); // Expected output: "Total Cart Value: $55"
 
+// Task8- Recursion in JavaScript
+function calculateSavings(years, amount) {
+    if (years >=10) return amount;
+    return calculateSavings(years + 1, amount * 1.05); // Savings increasing by 5% until reaching year 10.
+};
+// Test Data
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`); // Expected output: "Projected Savings: $1102.50"
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`); // Expected output: "Projected Savings: $6381.41"
